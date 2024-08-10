@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app-root">
+      <label for="textInput">{{name}}</label>
+      <!-- in old javascript -->
+      <!-- <input type="text" @keyup="updateValue()" name="textInput" id="textInput" /> -->
+      <!-- now in vue js (v-model) (Two way data binding)-->
+      <!-- Instead for create a custom method to take the value of input like on javascript DOM  -->
+      <!-- it can be maintained by v-model which make two way data binding -->
+      <!-- two way binding mean that if I change the varaible from the GUI it will change in the script and vice versa -->
+      <!-- variable binded with input and input binded with variable-->
+      <!-- (v-model) is using for input , textfield , forms elements-->
+      <input type="text" v-model="name" name="textInput" id="textInput" />
+
+      <br />
+      <label for="textInput_2">{{city}}</label>
+      <input type="text" name="textInput_2" id="textInput_2" />
+
+      <br />
+      <button @click="name = 'Mohamed'">Change to Mohamed</button>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

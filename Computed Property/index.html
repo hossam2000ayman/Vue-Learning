@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app-root">
+      <!--without computed -->
+      <h2>Number one is : {{numberOne}}</h2>
+      <button @click="firstIncrement()">Number one Increment</button>
+      <button @click="firstDecrement()">Number one Decrement</button>
+      <h2>Number two is : {{numberTwo}}</h2>
+      <button @click="secondIncrement()">Number two Increment</button>
+      <button @click="secondDecrement()">Number two Decrement</button>
+
+      <hr />
+      <hr />
+      <!-- with computed -->
+      <h2>Final result of Number one is : {{firstComputed}}</h2>
+      <button @click="firstIncrement()">Number one Increment</button>
+      <button @click="firstDecrement()">Number one Decrement</button>
+      <h2>Final result of Number two is : {{secondComputed}}</h2>
+      <button @click="secondIncrement()">Number two Increment</button>
+      <button @click="secondDecrement()">Number two Decrement</button>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

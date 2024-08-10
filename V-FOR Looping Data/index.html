@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="header-root">{{title}}</title>
+  </head>
+  <body>
+    <div id="app-root">
+      <h2>Your single name is : {{name}}</h2>
+
+      <hr />
+      <hr />
+      <h1>Your students is :</h1>
+      <h2 v-for="(name,index) in names" :key="index">{{name}}</h2>
+      <hr />
+      <hr />
+      <hr />
+      <h1 v-for="student in students" :key="student.id">
+        <p>
+          Student name is {{student.name}}
+          <br />
+          Student age is {{student.age}}
+          <br />
+          Student City is {{student.city}}
+          <br />
+          Student Project is {{student.project}}
+        </p>
+        <br />
+      </h1>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

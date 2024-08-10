@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="header-root">{{title}}</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app-root">
+      <!--we can make class binding-->
+      <h2 :class="myColor">My Title</h2>
+      <!--and we can also make 2 way data binding -->
+      <br />
+      Color:
+      <input type="text" v-model="myColor" />
+      <br />
+      <br />
+      Font Size:
+      <input type="number" v-model="myFont" />
+
+      <hr />
+      <hr />
+      <!-- we can make style binding -->
+      <h3 :style="`color: ${myColor}; font-size: ${myFont}px; `">
+        My Style binding
+      </h3>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn vue js</title>
+  </head>
+  <body>
+    <div id="app-root">
+      <h2>Number is {{number}}</h2>
+      <!-- trigger on event in Vue  (v-on:<event name>) or @<event name>-->
+      <button v-on:click="testFunction()">single click on me</button>
+      <button @click="testFunction()">single click on me</button>
+      <button v-on:dblclick="testFunction()">double click on me</button>
+
+      <button @dblclick="testFunction()">double click on me</button>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="script2.js"></script>
+  </body>
+</html>

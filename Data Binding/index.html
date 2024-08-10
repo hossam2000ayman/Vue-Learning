@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn vue js</title>
+  </head>
+  <body>
+    <div id="app-root">
+      <h2>My name is {{name}}</h2>
+      <h2>My age is {{age}}</h2>
+      <h2>{{sayHi("Afternoon", name)}}</h2>
+
+      Data binding on attribute in Vue "v-bind:" or ":"
+      <a href="{{link}}">test</a>
+      <br />
+      <img src="{{link}}" alt="test.com" />
+
+      <a v-bind:href="link">test</a>
+      <br />
+      <img v-bind:src="link" alt="test.com" />
+      <br />
+
+      <a :href="link">test</a>
+      <br />
+      <img :src="link" alt="test.com" />
+      <br />
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

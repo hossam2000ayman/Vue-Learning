@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn vue js</title>
+  </head>
+  <body>
+    <div id="app-root">
+      <h2>Number is {{number}}</h2>
+      <!-- trigger on event in Vue  (v-on:<event name>)-->
+      <button @dblclick="testFunction()">single click on me</button>
+      <br />
+      <a href="https://www.google.com" @click.prevent
+        >prevent single click event on me</a
+      >
+
+      <form action="post" @submit.prevent>
+        <br />
+        Name :
+        <input type="text" />
+        <br />
+        <br />
+        Address :
+        <input type="text" />
+        <br />
+        <br />
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <!-- Other Event Modifier @<event>.once (event occur once) make some statement -->
+      <a href="#" @click.once="testClickOnce()">Click once on Google Link</a>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="script3.js"></script>
+  </body>
+</html>
